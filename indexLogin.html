@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Evaluation System | Login</title>
+    <link rel="stylesheet" href="styleLOGIN.css">
+   <!--Font Awesome Link-->
+    <link rel=""stylesheet href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+
+<body>
+    <div class= "wrapper">
+        <h1>Login</h1>
+        <form action="#">
+            <input type="text" placeholder="KLD Number">
+            <input type="password" placeholder="Password" id ="password">
+            <img src="eye-close.png" id = "eyeicon">
+        </form>
+        <div class="terms"> 
+            <input type="checkbox" id = "checkbox">
+            <label for="checkbox">I agree to these <a href="#">Terms and Conditions</a></label>
+        </div>
+        <button><a href="index1.html">Login</a></button>
+        <h2>KLD - FES</h2>
+    </div>
+
+<!--JS-->
+<!--para mashow ang password-->
+    <script>
+        let eyeicon = document.getElementById("eyeicon");
+        let password = document.getElementById("password");
+
+        eyeicon.onclick = function(){
+            if(password.type == "password"){
+                password.type = "text";
+                eyeicon.src = "eye-open.png";
+            }else{
+                password.type = "password";
+                eyeicon.src = "eye-close.png";
+            }
+        }
+    </script>
+    
+
+</body>
+</html>
