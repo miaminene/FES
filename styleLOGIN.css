@@ -77,7 +77,7 @@ button a {
 }
 
 button:hover {
-    background: rgba(30, 103, 11, 0.977);
+    background: rgba(42, 135, 18, 0.977);
 }
 
 input:focus {
@@ -92,10 +92,31 @@ input:focus {
 }
 
 .terms label {
-    font-size: 0.7rem;
+    font-size: 15px;
 }
 
 .terms a {
     color: rgb(30, 103, 11);
     text-decoration: none;
+    font-weight: bold;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+.forgot-pass {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: -10px;
+    font-size: 15px;
+}
+
+.forgot-pass a {
+    color: rgb(30, 103, 11);
+    text-decoration: none;
+}
+
+.forgot-pass a:hover {
+    text-decoration: underline;
 }
