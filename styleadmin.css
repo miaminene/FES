@@ -223,6 +223,18 @@ body{
     box-shadow: 0 7px 25px rgba(0,0,0,0.08);
     border-radius: 20px;
 }
+.graphBox .box h3{
+    color: #0e610e;
+}
+.graphBox .box h4{
+    color: #d4de17;
+}
+.graphBox .box h5{
+    color: #0e610e;
+}
+.graphBox .box h2{
+    color: #0e610e;
+}
 
 /*DETAILS/RANKING*/
 .details{
@@ -230,7 +242,7 @@ body{
     width: 100%;
     padding: 20px;
     display: grid;
-    grid-template-columns: 500fr 1fr; /*500fr 1fr*/
+    grid-template-columns: 1fr 1fr; /*500fr 1fr*/
     grid-gap: 30px;
     /*margin-top: 10px;*/
     font-size: 16px;
