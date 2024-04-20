@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FES - Admin</title>
+    <link rel="stylesheet" href="styleadmin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <!--NAVIGATION BAR-->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="desktop-outline"></ion-icon></span>
+                         <span class="title"><b>FES | KLD</b></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="dashboard.html">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                            <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                            <span class="title">Faculty</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="student.html">
+                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                            <span class="title">Student</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="newspaper-outline"></ion-icon></span>
+                            <span class="title">Evaluation</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="documents-outline"></ion-icon></span>
+                            <span class="title">Questionnaire</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                            <span class="title">Sign Out</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+        <!--MAIN-->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+        <!--SEARCH BAR
+        <div class="search">
+            <label>
+                <input type="text" placeholder="Search Here">
+                <ion-icon name="search-outline"></ion-icon>
+            </label>
+        </div>-->
+                <!--USERIMG-->
+                <div class="user">
+                    <img src="img/user.jpeg">
+                </div>
+            </div>
+
+        <!--STUDENT RECORD FILTER-->
+        <div class="studentContainer">
+            <header>
+                <div class="filterStudent">
+                    <div class="student">
+                       <b> Show </b><select name="" id="table_size">
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select> <b>Student</b>
+                    </div>
+
+                    <div class="filter">
+                        <label for="search"><b>Search: </b></label>
+                        <input type="search" name="" id="search" placeholder="Enter Name or Section">
+                    </div>
+
+                </div>
+
+                <div class="addStudentBtn">
+                    <button>New Student</button>
+                </div>
+            </header>
+
+            <table>
+
+                <thead>
+                    <tr class="heading">
+                        <th>KLD Number</th>
+                        <th>First Name</th>
+                        <th>Middle Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Course</th>
+                        <th>Section</th>
+                        <th>Year</th>
+                        <th>Sex</th>
+                        <th>Status</th>
+                        <th>Action</th> <!--10-->
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>KLD-22-000121</td>
+                        <td>Jemilson</td>
+                        <td>Andaya</td>
+                        <td>Buscagan</td>
+                        <td>jabuscagan@kld.edu.ph</td>
+                        <td>BSIS</td>
+                        <td>201</td>
+                        <td>2nd year</td>
+                        <td>Male</td>
+                        <td>Done</td>
+                        <td>
+                            <button><i class="fa-regular fa-eye"></i></button>
+                            <button><i class="fa-regular fa-pen-to-square"></i></button>
+                            <button><i class="fa-regular fa-trash-can"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>KLD-22-000132</td>
+                        <td>John Lloyd</td>
+                        <td>Flordeliza</td>
+                        <td>Mata</td>
+                        <td>jlfmata@kld.edu.ph</td>
+                        <td>BSIS</td>
+                        <td>201</td>
+                        <td>2nd year</td>
+                        <td>Male</td>
+                        <td>Not Yet</td>
+                        <td>
+                            <button><i class="fa-regular fa-eye"></i></button>
+                            <button><i class="fa-regular fa-pen-to-square"></i></button>
+                            <button><i class="fa-regular fa-trash-can"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>KLD-22-000135</td>
+                        <td>Kimberly</td>
+                        <td>Firmalino</td>
+                        <td>Colicot</td>
+                        <td>kfcolicot@kld.edu.ph</td>
+                        <td>BSIS</td>
+                        <td>207</td>
+                        <td>2nd year</td>
+                        <td>Female</td>
+                        <td>Done</td>
+                        <td>
+                            <button><i class="fa-regular fa-eye"></i></button>
+                            <button><i class="fa-regular fa-pen-to-square"></i></button>
+                            <button><i class="fa-regular fa-trash-can"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>KLD-22-000139</td>
+                        <td>Jasia Dalaine</td>
+                        <td>Andaya</td>
+                        <td>Batistis</td>
+                        <td>jdbatistis@kld.edu.ph</td>
+                        <td>BSIS</td>
+                        <td>301</td>
+                        <td>3rd year</td>
+                        <td>Female</td>
+                        <td>Done</td>
+                        <td>
+                            <button><i class="fa-regular fa-eye"></i></button>
+                            <button><i class="fa-regular fa-pen-to-square"></i></button>
+                            <button><i class="fa-regular fa-trash-can"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>KLD-22-000167</td>
+                        <td>Ma. Lyzel</td>
+                        <td>Cruz</td>
+                        <td>Lopez</td>
+                        <td>mllopez@kld.edu.ph</td>
+                        <td>BSIS</td>
+                        <td>102</td>
+                        <td>1st year</td>
+                        <td>Female</td>
+                        <td>Not Yet</td>
+                        <td>
+                            <button><i class="fa-regular fa-eye"></i></button>
+                            <button><i class="fa-regular fa-pen-to-square"></i></button>
+                            <button><i class="fa-regular fa-trash-can"></i></button>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <footer>
+                <span>Showing 1 to 10 of 50 Students</span>
+                <div class="pagination">
+                    <button>Prev</button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button>Next</button>
+                </div>
+            </footer>
+        </div>
+
+        <!--POP UP FORM-->
+        <div class="dark_bg">
+
+            <div class="popup">
+                <header>
+                    <h2 class="modalTitle">Fill the Form</h2>
+                    <button class="coseBtn">&times</button>
+                </header>
+
+            <div class="inputFieldContainer">
+
+                <div class="namefield">
+                    <div class="form_control">
+                        <label for="Kldnum">KLD Number:</label>
+                        <input type="text" name="" id="Kldnum" required>
+                    </div>
+
+                    <div class="form_control">
+                        <label for="fName">First Name:</label>
+                        <input type="text" name="" id="fName" required>
+                    </div>
+
+                    <div class="form_control">
+                        <label for="mName">Middle Name:</label>
+                        <input type="text" name="" id="mName" required>
+                    </div>
+
+                    <div class="form_control">
+                        <label for="lName">Last Name:</label>
+                        <input type="text" name="" id="lName" required>
+                    </div>
+                </div>
+
+                    <div class="form_control">
+                        <label for="kEemail">KLD Email:</label>
+                        <input type="email" name="" id="kEmail" required>
+                    </div>
+
+                    <div class="form_control">
+                        <label for="course">Course:</label>
+                        <input type="text" name="" id="course" required>
+                    </div>
+
+                    <div class="form_control">
+                        <label for="sec">Section:</label>
+                        <input type="text" name="" id="sec" required>
+                    </div>
+
+                    <div class="form_control">
+                        <label for="year">Year:</label>
+                        <input type="text" name="" id="year" required>
+                    </div>
+
+                    <div class="form_control">
+                        <label for="sex">Sex</label>
+                        <input type="text" name="" id="sex" required>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="popupFooter">
+                <button form="myForm" class="submitBtn"></button>
+            </footer>
+        </div>
+    </div>
+
+
+    <!--JS for popup-->
+    <script src="student.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!--===CHART JS===-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+    <script src="chart.js"></script>
+
+    <script>
+        //MenuToggle
+        let toggle = document.querySelector('.toggle');
+        let navigation = document.querySelector('.navigation');
+        let main = document.querySelector('.main');
+        
+        toggle.onclick = function(){
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+        }
+
+        //add hovered class iin selected list item
+        let list = document.querySelectorAll('.naviagation li');
+        function activeLink(){
+            list.forEach((item) =>
+            item.classList.remove('hovered'));
+            this.classList.add('hovered')
+        }
+        list.forEach((item) =>
+        item.addEventListener('mouseover',activeLink));
+    </script>
+</body>
+</html>
