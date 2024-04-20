@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styleadmin.css">
 </head>
 <body>
+    <!--NAVIGATION BAR-->
     <div class="container">
         <div class="navigation">
             <ul>
@@ -32,7 +33,7 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="student.html">
                         <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
                             <span class="title">Student</span>
                     </a>
@@ -136,67 +137,119 @@
         <!--CHARTS-->
         <div class="graphBox">
             <div class="box">
-                <canvas id="myChart"></canvas>
+              <h2><center>Student Population per Institute</center></h2>
+              <br>
+              <canvas id="myChart"></canvas> 
             </div>
-            <div class="box"></div> 
+            <div class="box">
+                <h2><center>Evaluation Rate per Institute</center></h2>
+                <canvas id="donutChart"></canvas>
+            </div> 
         </div>
 
         <!--DETAILS LIST-->
         <div class="details">
             <div class="list"><!--recentsOrders-->
                 <div class="cardHeader">
-                    <h2>Best Employee of the Year</h2>
+                    <h2>Top Performing Full Time <br> Faculty of the Semester</h2>
                     <a href="#" class="btn">View All</a>
                 </div>
                 <table>
                     <thead>
                         <tr>
                             <td>Rank</td>
-                            <td>Name</td>
-                            <td>Position</td>
-                            <td>Employment Status</td>
-                            <td>Average</td>
+                            <td>Faculty Name</td>
+                            <td>Institution</td>
+                            <td>Rate</td>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>Mark Borja</td>
-                            <td>Instructor III</td>
-                            <td>Part-Time</td>
+                            <td>Mark Christopher Borja</td>
+                            <td>IICS</td>
                             <td>98%</td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>Cesar Cruz</td>
-                            <td>Instructor II</td>
-                            <td>Full-Time</td>
+                            <td>Cesar Galingana</td>
+                            <td>IICS</td>
                             <td>95%</td>
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td>Andrew Reyes</td>
-                            <td>Instructor I</td>
-                            <td>Full-Time</td>
+                            <td>Cecile Alvaran</td>
+                            <td>IICS</td>
                             <td>91%</td>
                         </tr>
                         <tr>
                             <td>4</td>
-                            <td>John Lloyd Mata</td>
-                            <td>Instructor III</td>
-                            <td>Part-Time</td>
+                            <td>Jhellee Aquino</td>
+                            <td>IHPD</td>
+                            <td>90%</td>
+                        </tr> 
+                        <tr>
+                            <td>5</td>
+                            <td>Ellaine Estil</td>
+                            <td>IHPD</td>
+                            <td>89%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!--2ND TABLE FOR RANKING-->
+            <div class="details2">
+            <div class="list"><!--recentsOrders-->
+                <div class="cardHeader">
+                    <h2>Top Performing Part Time <br>Faculty of the Semester</h2>
+                    <a href="#" class="btn">View All</a>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Rank</td>
+                            <td>Faculty Name</td>
+                            <td>Institution</td>
+                            <td>Rate</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Shenalyn Alcones</td>
+                            <td>IHPD</td>
+                            <td>98%</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Kenneth Auxillios-Cualbar</td>
+                            <td>IICS</td>
+                            <td>95%</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Renato Barquila</td>
+                            <td>ION</td>
+                            <td>91%</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Lodilio Millo</td>
+                            <td>IOE</td>
                             <td>89%</td>
                         </tr> 
                         <tr>
                             <td>5</td>
-                            <td>Jemilson Buscagan</td>
-                            <td>Instructor II</td>
-                            <td>Part-Time</td>
+                            <td>Rodel Antang</td>
+                            <td>IOM</td>
                             <td>88%</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+            </div>
+
 
             <!---->
 
@@ -210,7 +263,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-    <!--===CHART JS===--> 
+    <!--===CHART JS===-->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
     <script src="chart.js"></script>
 
