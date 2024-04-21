@@ -729,3 +729,154 @@ input::-webkit-outer-spin-button{
     opacity: 1;
     visibility: visible;
 }
+
+
+/*====================================================================Faculty================================================================*/
+
+/*=============filter and search===============*/
+
+.faculty-body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 20vh;
+    background: var(--bg);
+    font-family: sans-serif;
+}
+
+.faculty-filterSearch {
+    display: flex;
+    min-width: 90%;
+    justify-content: center;
+    align-items: flex-start;
+    box-shadow: 3px 3px 20px var(--black1);
+    background: #90fa90;
+}
+
+.faculty-filterSearch header .faculty-filter-entries {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.faculty-filter-entries .faculty-entries {
+    color: #0e610e;
+}
+
+
+
+/*=============FACULTY DETAILS===============*/
+.faculty-details{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 500fr 1fr; /*500fr 1fr*/
+    grid-gap: 10px;
+    margin-top: 20px;
+    margin-left: 5px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.faculty-details .faculty-list{
+    position: relative;
+    display: grid;
+    min-height: 500px   ;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    border-radius: 20px;
+}
+
+.faculty-cardHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+.faculty-cardHeader h2{
+    font-weight: 600;
+    color: var(--green);
+}   
+
+
+/*EDIT BUTTON*/
+
+.faculty-btn-edit{
+    position: relative;
+    padding: 5px 10px;
+    background: var(--blue);
+    text-decoration: none;
+    color: var(--black1);
+    border-radius: 6px;
+}
+.faculty-btn-edit:hover{
+    cursor: pointer;
+}
+
+/*DELETE BUTTON*/
+
+.faculty-btn-del{
+    position: relative;
+    padding: 5px 10px;
+    background: var(--red);
+    text-decoration: none;
+    color: var(--black1);
+    border-radius: 6px;
+}
+.faculty-btn-del:hover{
+    cursor: pointer;
+}
+
+
+.faculty-details table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.faculty-details table thead td{
+    font-weight: 600;
+}
+.faculty-details .faculty-list table tr{
+    color: var(--black1);
+    border-bottom: 1px solid rgba(0,0,0,0.01);
+}
+.faculty-details .faculty-list table tr:last-child{
+    border-bottom: none;
+}
+.faculty-details .faculty-list table tbody tr:hover{
+    background: var(--green);
+    color: var(--white);
+}
+.faculty-details .faculty-list table tr td{
+    padding: 10px;
+}
+.faculty-details .faculty-list table tr td:last-child{
+    text-align: center;
+}
+.faculty-details .faculty-list table tr td:nth-child(1){
+    text-align: center;
+}
+.faculty-details .faculty-list table tr td:nth-child(2){
+    text-align: center;
+}
+.faculty-details .faculty-list table tr td:nth-child(3){
+    text-align: center;
+}
+.faculty-details .faculty-list table tr td:nth-child(4){
+    text-align: center;
+}
+
+.faculty-details .faculty-list table tr td:nth-child(5){
+    text-align: center;
+}
+
+.faculty-details .faculty-list table tr td:nth-child(6){
+    text-align: center;
+}
+
+.faculty-details .faculty-list table tr td:nth-child(7){
+    text-align: center;
+}
+
