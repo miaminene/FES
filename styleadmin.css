@@ -14,7 +14,7 @@ body{
 :root{
     --green: #0e610e;
     --white: #fff;
-    --grey: #adadad;
+    --grey: #d2cfcf;
     --black1: #222;
     --black2: #999;
 }
@@ -267,7 +267,7 @@ body{
     width: 100%;
     padding: 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr; /*500fr 1fr*/
+    grid-template-columns: 500fr 1fr; /*500fr 1fr*/
     grid-gap: 30px;
     /*margin-top: 10px;*/
     font-size: 16px;
@@ -445,11 +445,18 @@ body{
     color: var(--green);
     margin-left: 5px;
 }
+.filter input{
+    padding: 7px 10px;
+    border: 1px solid black;
+}
 .filter input:focus{
     border-color: var(--black1);
 }
 .studentContainer header .addStudentBtn{
     margin-bottom: 15px;
+}
+.addStudentBtn button i{
+    margin-right: 5px;
 }
 header .addStudentBtn button{
     padding: 9px 14px;
@@ -466,6 +473,16 @@ header .addStudentBtn button{
 header .addStudentBtn button:hover{
     color: white;
     background-color: var(--green);
+}
+
+.apply{
+   background-color: green;
+   color: white;
+   padding: 4px;
+   border-radius: 5px;
+   border: 1px solid black;
+   cursor: pointer;
+   pointer-events: auto;
 }
 
 .studentContainer table{
@@ -519,364 +536,152 @@ table td button{
     pointer-events: auto;
     outline: none;
     border: 1px solid var(--black1);
+    border-radius: 5px;
 }
 table td button:hover{
     background-color: var(--green);
     color: var(--white);
 }
 
-.studentContainer footer{
-    margin-top: 25px;
-    font-size: 16px;
+/*NEW STUDENT*/
+.body{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.studentContainer footer span{
-    color: black;
-}
-footer .pagination{
-    display: flex;
-}
-footer .pagination button{
-    width: 40px;
-    padding: 5px 0;
-    color: black;
-    background: transparent;
-    font-size: 16px;
-    cursor: pointer;
-    pointer-events: auto;
-    outline: none;
-    border-left: none;
-    border: 1px solid black;
-    margin: 0;
-}
-.pagination button:first-child{
-    width: 85px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-left: 1px solid black;
-}
-.pagination button:last-child{
-    width: 85px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-.pagination button.active, .pagination button:hover{
-    background: var(--green);
-    color: white;
-}
-.pagination button.act:first-child{
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.pagination button.act:last-child{
-    opacity: 1;
-    pointer-events: auto;
-}
-table tr .empty{
-    padding: 6px;
-    background: var(--grey);
-}
-
-/*POPUP FORM*/
-.dark_bg{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.6);
-    display: flex;
+    height: 100vh;
     justify-content: center;
     align-items: center;
-    opacity: 0;
-    visibility: hidden;
+    padding: 10px;
+    background: white;
 }
-.popup{
+.newStudent{
+    max-width: 700px;
+    width: 100%;
+    background: white;
+    padding: 25px 30px;
     border-radius: 5px;
-    box-shadow: 3px 3px 20px rgba(0,0,0,0.3);
-    background: var(--dark6);
-    transition: 0.4s;
-    user-select: none;
-    transform: scale(0.7);
-    opacity: 0;
-    visibility: hidden;
+    
 }
-.popup header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid var(--dark7);
-    padding: 10px 20px;
-}
-
-.popup header .closeBtn{
-    font-size: 30px;
-    font-weight: 300;
-    padding: 0 15px;
-}
-
-.popup header .closeBtn:hover, .popup footer .submitBtn:hover{
-    border-color: var(--dark7);
-    transition: 0.3s;
-}
-.popup footer{
-    border-top: 1px solid var(--dark7);
-    padding: 12px 20px;
-    text-align: right;
-}
-
-.popup form{
-    padding: 10px 20px;
-    display: flex;
-    align-items: flex-start;
-}
-
-.popup .imgholder{
-    width: 150px;
-    height: 150px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.5);
-    border-radius: 8px;
-    overflow: hidden;
+.newStudent .title{
+    font-size: 25px;
+    font-weight: 500;
     position: relative;
-    margin-right: 50px;
-    margin-top: 15px;
 }
-
-.popup .imgholder .upload{
+.newStudent .title::before{
+    content: '';
     position: absolute;
-    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: green;
     left: 0;
-    width: 100%;
-    height: 80px;
-    background: rgba(0,0,0,0.3);
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    cursor: pointer;
-    display: none;
+    bottom: 0;
 }
-
-.imgholder:hover .upload{
+.newStudent form .studentDetails{
     display: flex;
-}
-
-.imgholder .upload input{
-    display: none;
-}
-
-.imgholder .upload i{
-    color: #fff;
-    font-size: 35px;
-    font-weight: 300;
-}
-
-.imgholder .img{
-    width: 100%;
-    height: 100%;
-}
-
-form .inputFieldContainer .nameField,
-form .inputFieldContainer .ageCityField,
-form .inputFieldContainer .postSalary{
-    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    gap: 15px;
+    margin: 15px 0 5px 0;
 }
-
-form .inputFieldContainer .nameField input,
-form .inputFieldContainer .ageCityField input,
-form .inputFieldContainer .postSalary input{
-    width: 200px;
+form .studentDetails .inputBox{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
 }
-
-.inputFieldContainer .form_control{
-    margin: 10px 0;
-}
-
-.inputFieldContainer .form_control label{
+.studentDetails .inputBox .namedetails{
     display: block;
-    color: var(--dark8);
+    font-weight: 500;
     margin-bottom: 5px;
 }
-
-.form_control input{
-    padding: 10px;
-    border: 1px solid var(--dark6);
-    color: var(--dark8);
-    background: var(--dark4);
-    border-radius: 5px;
-    outline: none;
-    transition: 0.3s;
+.studentDetails .inputBox input{
+    height: 30px;
     width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.2s ease;
 }
-
-.form_control input:focus,
-.form_control input:valid{
-    border-color: var(--dark7);
+.studentDetails .inputBox input:focus,
+.studentDetails .inputBox input:valid{
+    border-color: green;
 }
-
-input::-webkit-inner-spin-button,
-input::-webkit-outer-spin-button{
+form .sexDetails .sexTitle{
+    font-size: 18px;
+    font-weight: 500;
+}
+form .sexDetails .category{
+    display: flex;
+    width: 80%;
+    margin: 14px 0;
+    justify-content: space-between;
+}
+.sexDetails .category label{
+    display: flex;
+    align-items: center;
+    margin: 18px;
+}
+.sexDetails .category .dot{
+    height: 18px;
+    width: 18px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two{
+    border-color: #d9d9d9;
+    background: green ;
+}
+form input[type="radio"]{
     display: none;
 }
-
-
-.active{
-    transform: scale(1);
-    opacity: 1;
-    visibility: visible;
+form .button-student{
+    height: 45px;
+    margin: 45px 0;
 }
-
-
-/*====================================================================Faculty================================================================*/
-
-/*=============filter and search===============*/
-
-.faculty-body {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 20vh;
-    background: var(--bg);
-    font-family: sans-serif;
-}
-
-.faculty-filterSearch {
-    display: flex;
-    min-width: 90%;
-    justify-content: center;
-    align-items: flex-start;
-    box-shadow: 3px 3px 20px var(--black1);
-    background: #90fa90;
-}
-
-.faculty-filterSearch header .faculty-filter-entries {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.faculty-filter-entries .faculty-entries {
-    color: #0e610e;
-}
-
-
-
-/*=============FACULTY DETAILS===============*/
-.faculty-details{
-    position: relative;
+form .button-student input{
+    height: 100%;
     width: 100%;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: 500fr 1fr; /*500fr 1fr*/
-    grid-gap: 10px;
-    margin-top: 20px;
-    margin-left: 5px;
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.faculty-details .faculty-list{
-    position: relative;
-    display: grid;
-    min-height: 500px   ;
-    background: var(--white);
-    padding: 20px;
-    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
-    border-radius: 20px;
-}
-
-.faculty-cardHeader{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 40px;
-}
-.faculty-cardHeader h2{
-    font-weight: 600;
-    color: var(--green);
-}   
-
-
-/*EDIT BUTTON*/
-
-.faculty-btn-edit{
-    position: relative;
-    padding: 5px 10px;
-    background: var(--blue);
-    text-decoration: none;
-    color: var(--black1);
-    border-radius: 6px;
-}
-.faculty-btn-edit:hover{
+    outline: none;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    background: green;
     cursor: pointer;
 }
-
-/*DELETE BUTTON*/
-
-.faculty-btn-del{
-    position: relative;
-    padding: 5px 10px;
-    background: var(--red);
-    text-decoration: none;
-    color: var(--black1);
-    border-radius: 6px;
+form .button-student input:hover{
+    background: white;
+    border: 1px solid green;
+    color: green;
 }
-.faculty-btn-del:hover{
-    cursor: pointer;
+.back button{
+    height: 30px;
+    margin: 10px;
+    background: white;
+    border: 1px solid;
+    padding: 5px;
+    color: green;
 }
-
-
-.faculty-details table{
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
+.back button i{
+    margin: 0 5px;
 }
-.faculty-details table thead td{
-    font-weight: 600;
+.back button:hover{
+    background: green;
+    color: white;
 }
-.faculty-details .faculty-list table tr{
-    color: var(--black1);
-    border-bottom: 1px solid rgba(0,0,0,0.01);
-}
-.faculty-details .faculty-list table tr:last-child{
-    border-bottom: none;
-}
-.faculty-details .faculty-list table tbody tr:hover{
-    background: var(--green);
-    color: var(--white);
-}
-.faculty-details .faculty-list table tr td{
-    padding: 10px;
-}
-.faculty-details .faculty-list table tr td:last-child{
-    text-align: center;
-}
-.faculty-details .faculty-list table tr td:nth-child(1){
-    text-align: center;
-}
-.faculty-details .faculty-list table tr td:nth-child(2){
-    text-align: center;
-}
-.faculty-details .faculty-list table tr td:nth-child(3){
-    text-align: center;
-}
-.faculty-details .faculty-list table tr td:nth-child(4){
-    text-align: center;
+.required{
+    color: red;
 }
 
-.faculty-details .faculty-list table tr td:nth-child(5){
-    text-align: center;
+@media (max-width: 584px) {
+    .newStudent{
+        max-width: 100%;
+    }
+    form .studentDetails .inputBox{
+        margin-bottom: 15px;
+        width: calc(100% / 2 - 20px);
+    }
 }
-
-.faculty-details .faculty-list table tr td:nth-child(6){
-    text-align: center;
-}
-
-.faculty-details .faculty-list table tr td:nth-child(7){
-    text-align: center;
-}
-
