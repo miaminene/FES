@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FES - Add Student</title>
+    <link rel="stylesheet" href="styleadmin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    
+    <!--NAVIGATION BAR-->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="desktop-outline"></ion-icon></span>
+                         <span class="title"><b>FES | KLD</b></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                            <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                            <span class="title">Faculty</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="student.html">
+                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                            <span class="title">Student</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="newspaper-outline"></ion-icon></span>
+                            <span class="title">Evaluation</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="documents-outline"></ion-icon></span>
+                            <span class="title">Questionnaire</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                            <span class="title">Log Out</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <!--MAIN-->
+    <div class="main">
+        <div class="topbar">
+            <div class="toggle">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
+    
+            <!--USERIMG-->
+            <div class="user">
+                <img src="img/user.jpeg">
+            </div>
+        </div>
+
+    <!--NEW STUDENT-->
+    <div class="back">
+        <button><i class="fa-solid fa-arrow-left-long"></i>Back</button>
+    </div>
+    <div class="body">
+    <div class="newStudent">
+        <div class="title">Add New Student</div>
+        <form action="#">
+            <div class="studentDetails">
+                <div class="inputBox">
+                    <span class="namedetails">KLD Number <span class="required">*</span></span>
+                    <input type=" text" placeholder="Enter kld number" required>
+                </div>
+
+                <div class="inputBox">
+                    <span class="namedetails">First Name <span class="required">*</span></span>
+                    <input type=" text" placeholder="Enter first name" required>
+                </div>
+
+                <div class="inputBox">
+                    <span class="namedetails">Middle Name</span>
+                    <input type=" text" placeholder="Enter middle name">
+                </div>
+
+                <div class="inputBox">
+                    <span class="namedetails">Last Name<span class="required">*</span></span>
+                    <input type=" text" placeholder="Enter last name" required>
+                </div>
+
+                <div class="inputBox">
+                    <span class="namedetails">Email<span class="required">*</span></span>
+                    <input type=" email" placeholder="Enter kld email" required>
+                </div>
+
+                <div class="inputBox">
+                    <span class="namedetails">Course<span class="required">*</span></span>
+                    <input type=" text" placeholder="Enter course" required>
+                </div>
+
+                <div class="inputBox">
+                    <span class="namedetails">Section<span class="required">*</span></span>
+                    <input type=" text" placeholder="Enter section" required>
+                </div>
+
+                <div class="inputBox">
+                    <span class="namedetails">Year<span class="required">*</span></span>
+                    <input type=" text" placeholder="Enter year level" required>
+                </div>
+
+                <div class="sexDetails">
+                    <input type="radio" name="gender" id="dot-1">
+                    <input type="radio" name="gender" id="dot-2">
+
+                    <span class="sexTitle">Sex</span>
+                    <div class="category">
+
+                        <label for="dot-1">
+                            <span class="dot one"></span>
+                            <span class="sex">Male</span>
+                        </label>
+
+                        <label for="dot-2">
+                            <span class="dot two"></span>
+                            <span class="sex">Female</span>
+                        </label>
+
+                    </div>
+                </div>
+            </div>
+            <div class="button-student">
+                <input type="submit" value="Add Student">
+            </div>
+
+        </form>
+    </div>
+</div>
+        
+
+
+
+
+         <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!--===CHART JS===-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+    <script src="chart.js"></script>
+
+    <script>
+        //MenuToggle
+        let toggle = document.querySelector('.toggle');
+        let navigation = document.querySelector('.navigation');
+        let main = document.querySelector('.main');
+        
+        toggle.onclick = function(){
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+        }
+
+        //add hovered class iin selected list item
+        let list = document.querySelectorAll('.naviagation li');
+        function activeLink(){
+            list.forEach((item) =>
+            item.classList.remove('hovered'));
+            this.classList.add('hovered')
+        }
+        list.forEach((item) =>
+        item.addEventListener('mouseover',activeLink));
+    </script>
+
+</body>
+</html>
