@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FES - Admin</title>
+    <link rel="stylesheet" href="styleadmin.css">
+</head>
+
+<html>
+    <body>
+
+        <!--NAVIGATION BAR-->
+        <div class="container">
+            <div class="navigation">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><ion-icon name="desktop-outline"></ion-icon></span>
+                             <span class="title"><b>FES | KLD</b></span>
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="admin_dashboard.html">
+                            <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                                <span class="title">Dashboard</span>
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="admin_faculty.html">
+                            <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                                <span class="title">Faculty</span>
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="student.html">
+                            <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                                <span class="title">Student</span>
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="admin_evaluation.html">
+                            <span class="icon"><ion-icon name="newspaper-outline"></ion-icon></span>
+                                <span class="title">Evaluation</span>
+                        </a>
+                    </li>
+
+    
+                    <li>
+                        <a href="#">
+                            <span class="icon"><ion-icon name="documents-outline"></ion-icon></span>
+                                <span class="title">Questionnaire</span>
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="#">
+                            <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                                <span class="title">Sign Out</span>
+                        </a>
+                    </li>
+    
+                </ul>
+            </div>
+            
+            <!--MAIN-->
+            <div class="main">
+                <div class="topbar">
+                    <div class="toggle">
+                        <ion-icon name="menu-outline"></ion-icon>
+                    </div>
+                    <!--USERIMG-->
+                    <div class="user">
+                        <img src="img/user.jpeg">
+                    </div>
+                </div>
+
+
+
+            <!--FILTERING AND SEARCH-->
+           
+            <div class="faculty-filterSearch">
+                <header>
+
+                    <div class="faculty-filter-entries">
+
+                        <div class="faculty-entries">
+                           Show <select name="" id="table-size">
+                                <option value="10">10</option>
+                                <option value="10">20</option>
+                                <option value="10">50</option>
+                                <option value="10">100</option> 
+                                </select> entries
+                            
+                            
+                            <div class="faculty-filter">
+                                <input type="search" name="" id="search" placeholder="Search">
+                            </div>
+                        </div>
+                    </div>
+
+                        <div class="addFacultyBtn">
+                            <button>Add Faculty</button>
+                        </div>
+
+                </header>
+               
+            </div>
+
+                 
+            <!--FACULTY LIST-->
+
+            <div class="faculty-details">
+                <div class="faculty-list">
+                        <div class="faculty-cardHeader">
+                            <h2>Details</h2>
+                        </div>
+                <table id="faculty-list">
+                    <thead>
+                        <tr>
+                            <th>Faculty ID</th>
+                            <th>First Name</th>
+                            <th>Middle Name</th>
+                            <th>Last Name</th>
+                            <th>Institute
+                                <select class="table-filter">
+                                    <option value="">All</option>
+                                    <option value="">IICS</option>
+                                    <option value="">IHPD</option>
+                                    <option value="">IOM</option>
+                                    <option value="">ION</option>
+                                    <option value="">IOE</option>
+                                </select>
+                            </th>
+                            <th>Email
+                            </th>
+                            <th>Sex
+                                <select class="table-filter">
+                                    <option value="">All</option>
+                                    <option value="">Female</option>
+                                    <option value="">Male</option>
+                                </select>
+                            </th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+        
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>John</td>
+                            <td>Dee</td>
+                            <td>Matibag</td>
+                            <td>IICS</td>
+                            <td>iics@example.com</td>
+                            <td>Male</td>
+                            <td><button class="faculty-btn-edit">Edit</button>
+                                <button class="faculty-btn-del">Delete</button></td>
+                        </tr>
+                        <tr class="">
+                            <td>2</td>
+                            <td>Elijah</td>
+                            <td>Santos</td>
+                            <td>Torres</td>
+                            <td>IHPD</td>
+                            <td>ihpd@example.com</td>
+                            <td>Female</td>
+                            <td><button class="faculty-btn-edit">Edit</button>
+                                <button class="faculty-btn-del">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Luka</td>
+                            <td>Matomal</td>
+                            <td>De Liam</td>
+                            <td>IOM</td>
+                            <td>iom@example.com</td>
+                            <td>Male</td>
+                            <td><button class="faculty-btn-edit">Edit</button>
+                                <button class="faculty-btn-del">Delete</button></td>
+                        </tr>
+                        <tr class="">
+                            <td>4</td>
+                            <td>Luke</td>
+                            <td>Amyor</td>
+                            <td>Faughder</td>
+                            <td>ION</td>
+                            <td>ion@example.com</td>
+                            <td>Male</td>
+                            <td><button class="faculty-btn-edit">Edit</button>
+                                <button class="faculty-btn-del">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Taylor</td>
+                            <td>Taylor</td>
+                            <td>Swift</td>
+                            <td>IICS</td>
+                            <td>erastour@example.com</td>
+                            <td>Female</td>
+                            <td><button class="faculty-btn-edit">Edit</button>
+                                <button class="faculty-btn-del">Delete</button></td>
+                        </tr>
+                        <tr class="">
+                            <td>6</td>
+                            <td>Kimberly</td>
+                            <td>Sea-Turtales</td>
+                            <td>Colicot</td>
+                            <td>IICS</td>
+                            <td>iics@example.com</td>
+                            <td>Female</td>
+                            <td><button class="faculty-btn-edit">Edit</button>
+                                <button class="faculty-btn-del">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>August</td>
+                            <td>Betty</td>
+                            <td>Cardigan</td>
+                            <td>IICS</td>
+                            <td>iics@example.com</td>
+                            <td>Female</td>
+                            <td><button class="faculty-btn-edit">Edit</button>
+                                <button class="faculty-btn-del">Delete</button></td>
+                        </tr>
+                        <tr class="">
+                            <td>8</td>
+                            <td>Kimberly</td>
+                            <td>Sea-Turtales</td>
+                            <td>Colicot</td>
+                            <td>IOE</td>
+                            <td>ioe@example.com</td>
+                            <td>Female</td>
+                            <td><button class="faculty-btn-edit">Edit</button>
+                                <button class="faculty-btn-del">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Taylor</td>
+                            <td>Taylor</td>
+                            <td>Swift</td>
+                            <td>IOE</td>
+                            <td>ioe@example.com</td>
+                            <td>Female</td>
+                            <td><button class="faculty-btn-edit">Edit</button>
+                                <button class="faculty-btn-del">Delete</button></td>
+                        </tr>
+                    </tbody>        
+                </table>
+            </div>
+            </div>
+
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!--===SIDEBAR JS===-->
+    <script src="adminSidebar.js"></script>
+
+
+    </body>
+</html>
