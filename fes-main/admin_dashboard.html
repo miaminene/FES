@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FES - Admin</title>
+    <link rel="stylesheet" href="styleadmin.css">
+    
+</head>
+<body>
+    <form action="admin.dashboard.php" method="post">
+
+    <!--NAVIGATION BAR-->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="desktop-outline"></ion-icon></span>
+                         <span class="title"><b>FES | KLD</b></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                            <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                            <span class="title">Faculty</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="student.html">
+                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                            <span class="title">Student</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="newspaper-outline"></ion-icon></span>
+                            <span class="title">Evaluation</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="business-outline"></ion-icon></span>
+                            <span class="title">Institute</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="documents-outline"></ion-icon></span>
+                            <span class="title">Questionnaire</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                            <span class="title">Sign Out</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+        <!--MAIN-->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+                <!--USERIMG-->
+                <div class="user">
+                    <img src="img/user.jpeg">
+                </div>
+            </div>
+
+        <!--CARDS-->
+        <div class="cardBox">
+            <!--CARD 1-->
+            <div class="card">
+                <div>
+                    <div class="numbers">
+                        500
+                    </div>
+                    <div class="cardName">Total Faculty Members</div>
+                </div>
+                <div class="iconBox">
+                    <ion-icon name="people-outline"></ion-icon>
+                </div>
+            </div>
+            <!--CARD 2-->
+            <div class="card">
+                <div>
+                    <div class="numbers">
+                        4,000
+                    </div>
+                    <div class="cardName">Total Students</div>
+                </div>
+                <div class="iconBox">
+                    <ion-icon name="person-outline"></ion-icon>
+                </div>
+            </div>
+            <!--CARD 3-->
+            <div class="card">
+                <div>
+                    <div class="numbers">
+                        40
+                    </div>
+                    <div class="cardName">Total Classes</div>
+                </div>
+                <div class="iconBox">
+                    <ion-icon name="list-outline"></ion-icon>
+                </div>
+            </div>
+            <!--CARD 4-->
+            <div class="card">
+                <div>
+                    <div class="numbers">
+                        5
+                    </div>
+                    <div class="cardName">Total Users</div>
+                </div>
+                <div class="iconBox">
+                    <ion-icon name="person-outline"></ion-icon>
+                </div>
+            </div>
+        </div>
+
+        <!--CHARTS-->
+        <div class="graphBox">
+            <div class="box">
+              <h2><center>Student Population per Institute</center></h2>
+              <br>
+              <canvas id="myChart"></canvas> 
+            </div>
+            <div class="box">
+                <h2><center>Evaluation Rate per Institute</center></h2>
+                <canvas id="donutChart"></canvas>
+            </div> 
+        </div>
+
+        <!--DETAILS LIST-->
+        <div class="details">
+            <div class="list"><!--recentsOrders-->
+                <div class="cardHeader">
+                    <h2>Top Performing Full Time <br> Faculty of the Semester</h2>
+                    <a href="#" class="btn">View All</a>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Rank</td>
+                            <td>Faculty Name</td>
+                            <td>Institution</td>
+                            <td>Rate</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Mark Christopher Borja</td>
+                            <td>IICS</td>
+                            <td>98%</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Cesar Galingana</td>
+                            <td>IICS</td>
+                            <td>95%</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Cecile Alvaran</td>
+                            <td>IICS</td>
+                            <td>91%</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Jhellee Aquino</td>
+                            <td>IHPD</td>
+                            <td>90%</td>
+                        </tr> 
+                        <tr>
+                            <td>5</td>
+                            <td>Ellaine Estil</td>
+                            <td>IHPD</td>
+                            <td>89%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!--2ND TABLE FOR RANKING-->
+            <div class="details2">
+            <div class="list"><!--recentsOrders-->
+                <div class="cardHeader">
+                    <h2>Top Performing Part Time <br>Faculty of the Semester</h2>
+                    <a href="#" class="btn">View All</a>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Rank</td>
+                            <td>Faculty Name</td>
+                            <td>Institution</td>
+                            <td>Rate</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Shenalyn Alcones</td>
+                            <td>IHPD</td>
+                            <td>98%</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Kenneth Auxillios-Cualbar</td>
+                            <td>IICS</td>
+                            <td>95%</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Renato Barquila</td>
+                            <td>ION</td>
+                            <td>91%</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Lodilio Millo</td>
+                            <td>IOE</td>
+                            <td>89%</td>
+                        </tr> 
+                        <tr>
+                            <td>5</td>
+                            <td>Rodel Antang</td>
+                            <td>IOM</td>
+                            <td>88%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            </div>
+
+
+            <!---->
+
+        </div>
+
+        </div>
+    </div>
+
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!--===CHART JS===-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+    <script src="chart.js"></script>
+
+    <script>
+        //MenuToggle
+        let toggle = document.querySelector('.toggle');
+        let navigation = document.querySelector('.navigation');
+        let main = document.querySelector('.main');
+        
+        toggle.onclick = function(){
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+        }
+
+        //add hovered class iin selected list item
+        let list = document.querySelectorAll('.naviagation li');
+        function activeLink(){
+            list.forEach((item) =>
+            item.classList.remove('hovered'));
+            this.classList.add('hovered')
+        }
+        list.forEach((item) =>
+        item.addEventListener('mouseover',activeLink));
+    </script>
+</body>
+</html>
+
+

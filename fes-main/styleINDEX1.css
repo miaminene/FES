@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+    margin: auto;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b7dfb7;
+}
+
+.navbar img {
+    width: 90px;
+    height: auto;
+}
+
+h1 {
+    color: #10541a;
+    font-size: 25px;
+    margin-right: 37%;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #10541a;
+    text-transform: uppercase;
+}
+
+.navbar ul li a:hover {
+    color: #249535;
+}
+
+ h3 {
+    margin: 0;
+    padding: 10px 45px;
+    font-size: 25px;
+    color: #fff;
+    background-color: rgb(40, 121, 20);
+    margin-bottom: 15px;
+}
+
+h4 {
+    margin: 0;
+    padding: 3px 100px;
+    font-size: 17px;
+    color: #10541a;
+}
+
+/*=====================table=============================*/
+
+.table-container {
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.content-table {
+    border-collapse: collapse;
+    margin: 40px 0;
+    font-size: 16px;
+    min-width: 1000px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+    background-color: rgb(40, 121, 20);
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+    padding: 7px 15px;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+    text-align: center;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid rgb(40, 121, 20);
+}   
+
+.content-table tbody tr.active-row {
+    font-weight: bold;
+    color: rgb(40, 121, 20);
+}
+
+
+/*=====================Button Table=============================*/
+button {
+        margin: 0 auto;
+        display: block;
+
+        font-size: 1rem;
+        margin-top: 60px;
+        padding: 10px 10px;
+        border-radius: 20px;
+        outline: none;
+        border: none;
+        width: 15%;
+        color: #fff;
+        cursor: pointer;
+        background: #b7dfb7;
+}
+
+button a {
+    text-decoration: none;
+    color: #10541a;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+button:hover,
+button a:hover {
+    color: #fff;
+    background-color: rgb(40, 121, 20);
+}

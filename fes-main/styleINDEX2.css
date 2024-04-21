@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+    margin: auto;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b7dfb7;
+}
+
+.navbar img {
+    width: 90px;
+    height: auto;
+}
+
+h1 {
+    color: #10541a;
+    font-size: 25px;
+    margin-right: 37%;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #10541a;
+    text-transform: uppercase;
+}
+
+.navbar ul li a:hover {
+    color: #249535;
+}
+
+/* =========================FACULTY======================== */
+
+.faculty {
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center; /* Align items vertically in the center */
+    margin: auto;
+    height: 50px;
+    padding: 0 40px;
+    font-size: 14px;
+    background-color: #249535;
+    color: #fff;
+}
+
+.faculty div {
+    margin-right: 20px; /* Add spacing between the elements */
+}
+
+/* =========================EVAL LEGEND======================== */
+
+.eval-legend {
+    margin: 20px auto;
+    padding: 20px 40px;
+    display: block;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.eval-legend p {
+    margin: 20px auto;
+    padding: 20px 40px;
+    display: inline-block;
+    align-items: center;
+}
+
+/* Styling the evaluation legend */
+.eval-legend {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+/* Styling the evaluation content */
+.eval-content {
+    background-color: #fff;
+    padding: 70px;
+    margin-top: 10px;
+}
+
+.eval-questions {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.eval-questions th,
+.eval-questions td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.eval-questions th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+/* Styling the evaluation criteria sections */
+.eval-crit1,
+.eval-crit2,
+.eval-crit3,
+.eval-crit4 {
+    margin-top: 20px;
+}
+
+
+/* Styling the radio buttons */
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* =========================commentS======================== */
+
+.comments {
+    margin: auto;
+    display: block;
+}
+
+.comments form {
+    padding-left: 70px; /* Add padding to the left */
+}
+
+.comments input[type="text"] {
+    width: 300px; /* Adjust the width as needed */
+}
+
+
+form input {
+    width: 92%;
+    outline: none;
+    border: 1px solid #fff;
+    padding: 12px 20px;
+    height: 100px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background: #e4e4e4;
+}
+
+
+
+
+/*=====================Button Table=============================*/
+button {
+    margin: 0 auto;
+    display: block;
+
+    font-size: 1rem;
+    margin-top: -30px;
+    margin-bottom: 40px;
+    padding: 10px 10px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    width: 15%;
+    color: #fff;
+    cursor: pointer;
+    background: #b7dfb7;
+}
+
+button a, button {
+text-decoration: none;
+color: #10541a;
+font-weight: bold;
+font-size: 17px;
+}
+
+button:hover,
+button a:hover {
+color: #fff;
+background-color: rgb(40, 121, 20);
+}
+
+/* =========================MODEL-CONTAINER======================== */
+
+.popup {
+    padding: 170px;
+    padding-left: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0; left: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.popup .content{
+    padding: 29px;
+    height: 300px;
+    max-width: 350px;
+    margin: 0 10px;
+    background: #fff;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+}
+
+.content p {
+    margin: 65px 0;
+    font-size: 15px;
+}
+
+.content button {
+    width: 40%;
+    margin: 10px;
+    margin-top: 30px;
+    display: inline-block;
+}
+
+
+/*
+
+.popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0; left: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.popup .content{
+    height: 300px;
+    max-width: 350px;
+    margin: 0 10px;
+    background: #fff;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+}
+
+.content {
+    padding:29px;
+}
+
+.content p {
+    margin: 65px 0;
+    font-size: 15px;
+}
+f
+.content button {
+    width: 70%;
+    margin: 10px;
+    margin-top: 30px;
+    display: inline-block;
+}
+
+
+
+*/
