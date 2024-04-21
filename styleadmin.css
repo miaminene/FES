@@ -458,6 +458,13 @@ body{
 .addStudentBtn button i{
     margin-right: 5px;
 }
+.addStudentBtn button a{
+    color: green;
+    text-decoration: none;
+}
+.addStudentBtn button a:hover{
+    color: white;
+}
 header .addStudentBtn button{
     padding: 9px 14px;
     color: var(--black1);
@@ -665,6 +672,14 @@ form .button-student input:hover{
     padding: 5px;
     color: green;
 }
+.back a{
+    color: green;
+    text-decoration: none;
+}
+.back a:hover{
+    background: green;
+    color: white;
+}
 .back button i{
     margin: 0 5px;
 }
@@ -682,6 +697,16 @@ form .button-student input:hover{
     }
     form .studentDetails .inputBox{
         margin-bottom: 15px;
-        width: calc(100% / 2 - 20px);
+        width: 100%
+    }
+    form .sexDetails .category{
+        width: 100%;
+    }
+    .newStudent form .studentDetails{
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+    .studentDetails::-webkit-scrollbar{
+        width: 0;
     }
 }
